@@ -1,0 +1,13 @@
+def build(bld):
+  bld(features     = 'cxx cshlib',
+      source       = 'phrase_clustering.cpp',
+      name         = 'phrase_clustering',
+      target       = 'phrase_clustering',
+      includes     = '.')
+  bld(features     = 'cxx cstaticlib',
+      source       = 'phrase_clustering.cpp',
+      name         = 'phrase_clustering',
+      target       = 'phrase_clustering',
+      includes     = '.')
+  
+  bld.install_files('${PREFIX}/include/phrase_clustering', bld.path.ant_glob('*.hpp'))
