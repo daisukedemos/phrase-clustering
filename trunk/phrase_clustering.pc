@@ -1,0 +1,10 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include
+
+Name: phrase_clustering 
+Description: Phrase Clustering Library
+Version: 0.0.1
+Cflags: -I${includedir}
+Libs: -L${libdir} -lphrase_clustering

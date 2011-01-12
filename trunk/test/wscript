@@ -1,0 +1,5 @@
+def build(bld):
+  bld(features     = 'cxx cprogram gtest',
+      source       = 'phrase_clustering_test.cpp',
+      target       = 'phrase_clustering_test',
+      uselib_local = 'phrase_clustering')
