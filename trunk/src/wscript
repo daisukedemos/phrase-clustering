@@ -9,5 +9,11 @@ def build(bld):
       name         = 'phrase_clustering',
       target       = 'phrase_clustering',
       includes     = '.')
+  bld(features     = 'cxx cprogram', 
+      source       = 'phrase_clustering_main.cpp',
+      target       = 'phrase_clustering',
+      uselib_local = 'phrase_clustering',
+      includes     = '.')
+
   
   bld.install_files('${PREFIX}/include/phrase_clustering', bld.path.ant_glob('*.hpp'))
